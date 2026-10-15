@@ -1,0 +1,781 @@
+/* ═══════════════════════════════════════════════════════════════
+   PARCIS DEVELOPER CONSOLE STYLES
+   Fluid & Responsive across Mobile, Tablet, Desktop, & TV / 4K
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Container & Layout ── */
+.console-page {
+  padding-top: 116px;
+  padding-bottom: 80px;
+  padding-left: 24px;
+  padding-right: 24px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.console-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.console-container-narrow {
+  max-width: 960px;
+}
+
+/* ── Hero Card (Not Connected State) ── */
+.console-hero-card {
+  text-align: center;
+  padding: 56px 24px;
+  background: radial-gradient(circle at 50% 0%, rgba(34, 197, 94, 0.12) 0%, rgba(10, 10, 15, 0.6) 70%), var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.console-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+
+.console-hero-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+
+.console-hero-subtitle {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--text-sec);
+  line-height: 1.6;
+}
+
+.console-hero-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+/* ── Features Grid ── */
+.console-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.console-feature-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.console-feature-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.console-feat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.console-feature-item h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.console-feature-item p {
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  line-height: 1.5;
+}
+
+/* ── Console Header Card ── */
+.console-header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.console-header-left {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.console-header-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.console-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-sec);
+}
+
+.console-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.console-dot.online { background: var(--green); box-shadow: 0 0 10px var(--green); }
+.console-dot.idle { background: var(--warning); }
+
+.console-account-badge {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.console-account-addr {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 340px;
+}
+
+/* ── Status Pills ── */
+.trial-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.15);
+  border: 1px solid rgba(14, 165, 233, 0.35);
+  color: var(--cyan);
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+.streaming-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  color: var(--green);
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+.free-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--text-sec);
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+/* ── Console Tabs Navigation ── */
+.console-tabs-bar {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.console-tabs-bar::-webkit-scrollbar { display: none; }
+
+.console-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-sec);
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-family: inherit;
+}
+
+.console-tab-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.console-tab-btn.active {
+  color: #040405;
+  background: var(--green);
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.25);
+}
+
+/* ── Cards & Overview Grid ── */
+.console-grid-overview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.console-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.console-card-wide {
+  grid-column: 1 / -1;
+}
+
+.console-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.console-card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ── Badges ── */
+.badge-trial {
+  background: rgba(14, 165, 233, 0.15);
+  color: var(--cyan);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.badge-pro {
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--green);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.badge-free {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-sec);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* ── Quota Bar ── */
+.quota-bar-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.quota-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--green), var(--cyan));
+  transition: width 0.4s ease;
+}
+
+/* ── Contract Info Grid ── */
+.console-contract-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.contract-info-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+}
+
+.contract-info-item .info-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.contract-info-item .info-val {
+  font-family: monospace;
+  font-size: 0.82rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  word-break: break-all;
+  gap: 6px;
+}
+
+/* ── API Key Box ── */
+.api-key-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.icon-btn-inline {
+  background: transparent;
+  border: none;
+  color: var(--text-sec);
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.icon-btn-inline:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Code Snippet Boxes ── */
+.code-snippet-box {
+  background: #09090c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.code-snippet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.code-pre {
+  margin: 0;
+  padding: 16px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #e4e4e7;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ── Pricing Matrix Grid ── */
+.pricing-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.pricing-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.pricing-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.pricing-card.featured {
+  border-color: rgba(34, 197, 94, 0.4);
+  background: radial-gradient(circle at 50% 0%, rgba(34, 197, 94, 0.08) 0%, var(--surface) 60%);
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.1);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--green);
+  color: #040405;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pricing-price {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.03em;
+  margin: 12px 0 6px;
+}
+
+.pricing-price span {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.86rem;
+  color: var(--text-sec);
+}
+
+.pricing-features li.disabled {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+/* ── Webhook Form Grid ── */
+.webhook-add-grid {
+  display: grid;
+  grid-template-columns: 1fr 200px auto;
+  gap: 12px;
+  align-items: end;
+}
+
+/* ── Widget Builder Grid ── */
+.widget-builder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+/* ── Console Table & Responsive Wrapper ── */
+.console-table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.console-table {
+  width: 100%;
+  min-width: 540px;
+  border-collapse: collapse;
+}
+
+.console-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.console-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.88rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Ultra-Wide & TV Screens (≥ 1600px) ── */
+@media (min-width: 1600px) {
+  .console-page {
+    padding-top: 130px;
+    padding-bottom: 100px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  .console-container {
+    max-width: 1560px;
+  }
+  .console-container-narrow {
+    max-width: 1100px;
+  }
+  .console-card {
+    padding: 32px;
+  }
+  .console-header-card {
+    padding: 28px 36px;
+  }
+  .console-tab-btn {
+    padding: 12px 22px;
+    font-size: 0.94rem;
+  }
+  .console-grid-overview {
+    gap: 28px;
+  }
+  .pricing-matrix-grid {
+    gap: 28px;
+  }
+  .console-features-grid {
+    gap: 28px;
+  }
+}
+
+/* ── 4K & Huge TV Screens (≥ 2200px) ── */
+@media (min-width: 2200px) {
+  .console-container {
+    max-width: 1800px;
+  }
+  .console-hero-title {
+    font-size: 3.4rem;
+  }
+  .console-hero-subtitle {
+    max-width: 760px;
+    font-size: 1.2rem;
+  }
+}
+
+/* ── Laptops & Small Desktops (≤ 1100px) ── */
+@media (max-width: 1100px) {
+  .pricing-matrix-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* ── Tablets & Small Laptops (≤ 900px) ── */
+@media (max-width: 900px) {
+  .console-grid-overview {
+    grid-template-columns: 1fr;
+  }
+  .widget-builder-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .webhook-add-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .webhook-add-grid > button {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ── Tablets & Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+  .console-page {
+    padding-top: 96px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 60px;
+  }
+  .console-header-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    gap: 16px;
+  }
+  .console-header-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .console-header-right .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .api-key-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+  .api-key-box > div:last-child {
+    width: 100%;
+    display: flex;
+  }
+  .api-key-box .btn {
+    flex: 1;
+    justify-content: center;
+  }
+  .pricing-matrix-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .webhook-add-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+/* ── Mobile Devices (≤ 540px) ── */
+@media (max-width: 540px) {
+  .console-page {
+    padding-top: 84px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 48px;
+  }
+  .console-hero-card {
+    padding: 36px 16px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+  .console-hero-title {
+    font-size: 1.75rem;
+  }
+  .console-hero-subtitle {
+    font-size: 0.92rem;
+  }
+  .console-hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .console-hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .console-features-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .console-card {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+  .console-tab-btn {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+  .console-account-addr {
+    max-width: 210px;
+  }
+  .console-contract-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .code-pre {
+    font-size: 0.74rem;
+    padding: 12px;
+  }
+  .pricing-card {
+    padding: 22px 18px;
+  }
+  .pricing-price {
+    font-size: 1.75rem;
+  }
+}
+
+/* ── Extra Small Mobile (≤ 380px) ── */
+@media (max-width: 380px) {
+  .console-account-addr {
+    max-width: 140px;
+  }
+  .console-tab-btn {
+    padding: 7px 11px;
+    font-size: 0.78rem;
+    gap: 6px;
+  }
+  .console-header-card h2 {
+    font-size: 1.35rem !important;
+  }
+}
